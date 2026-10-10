@@ -204,3 +204,85 @@ h1 {
     width: 260px;
     height: 260px;
 }
+/* The apology letter */
+.apology-card {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 430px;
+    margin: 24px auto;
+    padding: 26px 22px;
+
+    background: #fffaf7;
+    color: #684553;
+    border: 1px solid #f4c6d7;
+    border-radius: 22px;
+
+    box-shadow: 0 10px 30px rgba(190, 80, 125, 0.13);
+
+    animation: letterAppear 1s ease both;
+}
+
+.heart-decoration {
+    color: #e58baa;
+    letter-spacing: 8px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.apology-card h2 {
+    margin: 12px 0 20px;
+    color: #a34469;
+    font-family: Georgia, serif;
+    font-style: italic;
+    text-align: center;
+}
+
+.letter-body {
+    padding: 8px 0;
+    border-top: 1px solid #f1d7df;
+    border-bottom: 1px solid #f1d7df;
+}
+
+.letter-body p {
+    margin: 15px 0;
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.letter-signoff {
+    margin: 20px 0 0;
+    color: #b64c75;
+    font-family: Georgia, serif;
+    font-style: italic;
+    text-align: right;
+}
+
+.apology-question {
+    margin: 24px 8px 18px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+@keyframes letterAppear {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keep the letter comfortable to read on phones */
+@media (max-width: 480px) {
+    .apology-card {
+        padding: 22px 16px;
+    }
+
+    .letter-body p {
+        font-size: 14px;
+    }
+}
